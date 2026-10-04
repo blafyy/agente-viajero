@@ -6,7 +6,7 @@ Programa en HTML y JavaScript que arma un grafo de entre 5 y 15 ciudades con una
 
 Abrir `index.html` en el navegador, o entrar a la página publicada:
 
-https://USUARIO.github.io/agente-viajero/
+https://blafyy.github.io/agente-viajero/
 
 ## Archivos
 

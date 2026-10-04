@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problema del agente viajero</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Problema del agente viajero</h1>
+
+<div class="paso" id="paso1">
+  <h3>Paso 1: Número de ciudades</h3>
+  <p>Ciudades (entre 5 y 15):
+    <input type="number" id="n" value="6" min="5" max="15">
+    <button id="construir">Construir</button>
+  </p>
+  <p class="error" id="error"></p>
+</div>
+
+<div id="contenido" style="display:none">
+
+  <div class="paso" id="paso2">
+    <h3>Paso 2: Matriz de costos</h3>
+    <p>
+      <button id="auto" class="activo">Generación automática</button>
+      <button id="manual">Ingreso manual</button>
+      <button id="nueva">Generar nueva</button>
+    </p>
+    <p class="ayuda">La diagonal es 0. Las celdas blancas se escriben; las grises se copian solas.</p>
+    <div id="matriz"></div>
+  </div>
+
+  <div class="paso" id="paso3">
+    <h3>Paso 3: Grafo</h3>
+    <div id="grafo"></div>
+    <p><label><input type="checkbox" id="pesos"> Mostrar pesos en las aristas</label></p>
+  </div>
+
+  <div class="paso" id="paso4">
+    <h3>Paso 4: Ruta óptima</h3>
+    <p><button id="calcular">Calcular ruta óptima</button></p>
+    <p class="error" id="aviso"></p>
+    <div id="resultado"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -12,9 +12,10 @@
 
 <div class="paso" id="paso1">
   <h3>Paso 1: Número de ciudades</h3>
-  <p>Ciudades (entre 5 y 15):
-    <input type="number" id="n" value="6" min="5" max="15">
+  <p>Ciudades (entre 5 y 100):
+    <input type="number" id="n" value="6" min="5" max="100">
     <button id="construir">Construir</button>
+    <button id="caso">Caso de estudio Rappi</button>
   </p>
   <p class="error" id="error"></p>
 </div>
@@ -28,7 +29,7 @@
       <button id="manual">Ingreso manual</button>
       <button id="nueva">Generar nueva</button>
     </p>
-    <p class="ayuda">La diagonal es 0. Las celdas blancas se escriben; las grises se copian solas.</p>
+    <p class="ayuda" id="ayudaMatriz">La diagonal es 0. Las celdas blancas se escriben; las grises se copian solas.</p>
     <div id="matriz"></div>
   </div>
 
@@ -36,6 +37,7 @@
     <h3>Paso 3: Grafo</h3>
     <div id="grafo"></div>
     <p><label><input type="checkbox" id="pesos"> Mostrar pesos en las aristas</label></p>
+    <p class="ayuda" id="leyenda"></p>
   </div>
 
   <div class="paso" id="paso4">
@@ -43,6 +45,14 @@
     <p><button id="calcular">Calcular ruta óptima</button></p>
     <p class="error" id="aviso"></p>
     <div id="resultado"></div>
+    <div id="pasos" style="display:none">
+      <p>
+        <button id="anterior">◀ Anterior</button>
+        <button id="siguiente">Siguiente ▶</button>
+        <button id="todo">Ver toda la ruta</button>
+      </p>
+      <div id="tablaPasos"></div>
+    </div>
   </div>
 
 </div>

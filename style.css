@@ -93,3 +93,14 @@ td input::-webkit-outer-spin-button {
   padding: 6px 10px;
   margin-top: 8px;
 }
+
+#tablaPasos th, #tablaPasos td {
+  width: auto;
+  padding: 2px 8px;
+  height: 24px;
+  font-size: 13px;
+}
+
+#tablaPasos tr.actual td {
+  background: #fde2e2;
+}

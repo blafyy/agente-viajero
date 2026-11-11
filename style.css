@@ -1,44 +1,84 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 15px;
-  color: #222;
-  background: #fff;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 12px;
+  color: #1f2d27;
+  background: #eef2f0;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 12px 30px 12px;
 }
 
 h1 {
   font-size: 24px;
+  color: #fff;
+  background: #114232;
+  margin: 0 -12px 18px -12px;
+  padding: 16px 20px;
+  border-radius: 0 0 8px 8px;
 }
 
 h3 {
-  font-size: 17px;
-  margin: 20px 0 8px 0;
+  font-size: 16px;
+  color: #114232;
+  margin: 0 0 10px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #d6e3dc;
+}
+
+.paso {
+  background: #fff;
+  border: 1px solid #d6e3dc;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
 }
 
 button {
   font-size: 14px;
-  padding: 5px 10px;
-  background: #eee;
-  border: 1px solid #999;
-  color: #222;
+  padding: 6px 12px;
+  margin: 2px 2px 2px 0;
+  background: #fff;
+  border: 1px solid #114232;
+  border-radius: 5px;
+  color: #114232;
   cursor: pointer;
 }
 
-button.activo {
-  background: #666;
+button:hover {
+  background: #e4efe9;
+}
+
+button.activo,
+#calcular {
+  background: #114232;
   color: #fff;
 }
 
+#calcular {
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+#calcular:hover,
+button.activo:hover {
+  background: #1b5e48;
+}
+
 button:disabled {
-  color: #999;
+  color: #9aa5a0;
+  border-color: #c5cfca;
+  background: #f4f6f5;
   cursor: default;
 }
 
 input[type=number] {
   width: 60px;
-  padding: 3px;
+  padding: 5px;
+  border: 1px solid #9fb5aa;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 table {
@@ -46,7 +86,7 @@ table {
 }
 
 th, td {
-  border: 1px solid #999;
+  border: 1px solid #c9d6cf;
   width: 40px;
   height: 28px;
   text-align: center;
@@ -54,12 +94,14 @@ th, td {
 }
 
 th {
-  background: #eee;
-  font-weight: normal;
+  background: #114232;
+  color: #fff;
+  font-weight: bold;
 }
 
 td.gris {
-  background: #eee;
+  background: #f1f5f3;
+  color: #44524b;
 }
 
 td input {
@@ -70,7 +112,13 @@ td input {
   padding: 0;
   text-align: center;
   font-size: 14px;
+  background: #fff;
   -moz-appearance: textfield;
+}
+
+td input:focus {
+  outline: 2px solid #2e8b57;
+  background: #f0faf4;
 }
 
 td input::-webkit-inner-spin-button,
@@ -79,28 +127,52 @@ td input::-webkit-outer-spin-button {
   margin: 0;
 }
 
+#grafo svg circle {
+  fill: #fff;
+  stroke: #114232;
+  stroke-width: 2;
+}
+
+#grafo svg circle:first-of-type {
+  fill: #d8f0e2;
+  stroke: #2e8b57;
+  stroke-width: 3;
+}
+
 .ayuda {
-  color: #555;
+  color: #5b6b63;
   font-size: 13px;
 }
 
 .error {
-  color: #a00;
+  color: #b02a2a;
 }
 
 .resultado {
-  border: 1px solid #999;
-  padding: 6px 10px;
+  background: #f0faf4;
+  border: 1px solid #9fcdb2;
+  border-left: 5px solid #2e8b57;
+  border-radius: 6px;
+  padding: 8px 14px;
   margin-top: 8px;
+}
+
+.resultado p {
+  margin: 4px 0;
 }
 
 #tablaPasos th, #tablaPasos td {
   width: auto;
-  padding: 2px 8px;
-  height: 24px;
+  padding: 2px 10px;
+  height: 26px;
   font-size: 13px;
+}
+
+#tablaPasos tr:nth-child(even) td {
+  background: #f6f9f7;
 }
 
 #tablaPasos tr.actual td {
   background: #fde2e2;
+  font-weight: bold;
 }

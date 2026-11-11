@@ -1,7 +1,7 @@
 var letras = "ABCDEFGHIJKLMNO";
 var MAX_CIUDADES_CALCULO = 8;
 var MAX_CIUDADES_PODA = 15;
-var MAX_CIUDADES = 100;
+var MAX_CIUDADES = 15;
 
 var n = 6;
 var costos = [];
